@@ -1,0 +1,90 @@
+/* 1. Variables de color y tipografía */
+:root {
+  --primary: #4E73DF;
+  --bg-light: #F8F9FC;
+  --card-bg: #FFFFFF;
+  --text: #333333;
+  --border: #E3E6F0;
+  --font-family: 'Inter', sans-serif;
+}
+
+/* 2. Fuente global */
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-light);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Contenedor central */
+.container {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+/* 4. Tarjetas limpias */
+.card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* 5. Titulares */
+h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+h2.h5 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* 6. Formularios */
+.form-label {
+  font-size: 0.9rem;
+  color: #555;
+}
+.form-control {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  height: 2.5rem;
+  padding: 0.5rem;
+}
+
+/* 7. Botones */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 500;
+  transition: filter .2s;
+}
+.btn-primary:hover {
+  filter: brightness(0.9);
+}
+
+/* 8. Listados de resultados */
+.list-group-item {
+  border: none;
+  padding: 0.75rem 1rem;
+}
+.list-group-item + .list-group-item {
+  border-top: 1px solid var(--border);
+}
+.list-group-item strong {
+  font-weight: 500;
+}
+.list-group-item small {
+  font-size: 0.8rem;
+}
+
+/* 9. Espaciados extras */
+.mb-4 { margin-bottom: 1.5rem !important; }
+.mt-4 { margin-top: 1.5rem !important; }
