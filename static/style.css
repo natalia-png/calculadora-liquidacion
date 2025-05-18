@@ -161,34 +161,47 @@ h2.h5 {
   color: var(--text-muted);
 }
 
-/* Tabla detalle anual */
+/*--------------------------------------------------------------
+TABLE / DETALLE ANUAL
+--------------------------------------------------------------*/
 .table-responsive {
   border: 1px solid var(--border);
   border-radius: 6px;
-  overflow: hidden;
+  /* permitimos scroll horizontal en lugar de ocultar */
+  overflow-x: auto;
+  /* opcionalmente dejar que el scroll vertical siempre se vea */
+  overflow-y: visible;
+  -webkit-overflow-scrolling: touch;
   box-shadow: var(--shadow-light);
 }
 
 .table {
+  width: 100%;
+  border-collapse: collapse;
   margin-bottom: 0;
 }
 
 .table th,
 .table td {
-  padding: 0.6rem 0.75rem;
+  padding: 0.75rem 1rem;
   vertical-align: middle;
+  /* añadimos líneas horizontales para que se vea la cuadrícula completa */
+  border-bottom: 1px solid var(--border);
 }
 
 .table thead th {
   color: var(--text-secondary);
   font-weight: 500;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 2px solid var(--primary);
 }
 
 .table tfoot td {
   font-weight: 600;
-  border-top: 2px solid var(--border);
+  /* destacamos la línea que separa los totales */
+  border-top: 2px solid var(--primary);
+  color: var(--text-primary);
 }
+
 
 /*--------------------------------------------------------------
 9. FOOTER
